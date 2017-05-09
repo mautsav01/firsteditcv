@@ -19,51 +19,173 @@
         <form name="myform" method="post" action="connect.jsp"  onsubmit="return validateForm();">
             <div class="tags">
                 <p>   Profile pic:</p><a href="filefront.jsp" target="_blank"> upload profile pic</a>
+                <br><br>
              <%
-         Object msg=request.getAttribute("name");
+          
+    Object msg1=request.getAttribute("name");
+  
     %>
-    <p>filename:</p>  <input type="text" value="<%=msg%>" name="msg">
-            
-         
-   
-            <br><br>
     
-          <p>  Firstname:</p><input type="text" placeholder="firstname"name="fname"><br>
+      
+  <p> filename2:</p>  <input type="text" value="<%=msg1%>" name="filename">
+    <table>     
+        <tr>
+        
+            <td>
+            
+    
+          <p>  Firstname:</p><input type="text" placeholder="firstname" name="fname"><br>
             <br>
+            </td><td>
          <p>   Lastname:</p><input type="text" placeholder="Lastname" name="lname"><br>
-          <br>
+          <br></td><td>
             <p>Email:</p><input type="text" placeholder="email" name="email"><br>
           <br>
-            
+            </td><td>
          <p>   Temporary-Address:</p><input type="text" placeholder="Temporary address" name="tadd"><br>
-<br>          
-         <p>  Phone number:</p><input type="text" placeholder="Phone number" name="phoneno"><br>
+<br>         </td><td> 
+         <p>  Phone number:</p><input type="text" placeholder="Phone number" name="phone"><br>
     <br> 
+    </td>
+    </tr>
+    </table>
+                <table><tr><td>
+         <p>  Your Work is based on:</p><input type="text" placeholder="eg:Doctor/Engineer" name="skillname"><br>
+        
+            </td></tr>
          
-            <p>Gender:</p><input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                    <input type="radio" name="gender" value="other"> Other<br><br>
-        <p>Marital Status:</p><input type="radio" name="mstatus" value="single"> Single
-                      <input type="radio" name="mstatus" value="married"> Married
-                      <input type="radio" name="mstatus" value="divorced"> Divorced<br><br>
-     <p>Blood Group:</p><input type="text" placeholder="Bood group" name="bg"><br><br>
-     <p>Permanent-Address:</p><input type="text" placeholder="Permanent-address" name="paddress">
-     <br><br>
-   
-            <p>Father's name:</p><input type="text" placeholder="Father's name"name="faname"><br>
-    <br>      
-            <p>Mother's name:</p><input type="text" placeholder="Mother's name" name="mname"><br>
-     <p>About yourself:</p><br><br><textarea rows="4" cols="50" name="comment">
-Write about yourself...</textarea>
-     <br><br>
-     <p>Work experience:</p><br><br><textarea rows="4" cols="50" name="comment1">
- work field
- number of years of experience
-    </textarea>
+<br>
+<table>
+    <tr>
+        <td>
+            <p>   You have skill in:</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="Skill1"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate1"><br>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <p>   You have skill in:</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="Skill2"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate2"><br>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <p>   You have skill in:</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="Skill3"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate3"><br>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <p>   You have skill in:</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="Skill4"></center>  </td><td> 
+ <p>Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate4"><br>
+</td>
+    </tr>
      
+
+</table>
+<hr><hr>
+
+<table>
+    <tr>
+        <td>
+            <p>  Language:</p><center><input type="text" placeholder="eg:English/japanese" name="lang1"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate11"><br>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <p>   Language :</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="lang2"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate12"><br>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <p>   Language:</p><center><input type="text" placeholder="eg:painting/java/photoshop" name="lang3"></center>  </td><td> 
+ <p>   Rate-Yourself(in %):</p><input type="number" min="0" max="100" placeholder="eg:30%/90%" name="rate13"><br>
+</td>
+    </tr>
      
-    
-     <br><br>
+
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p>  Work experience:</p><center><input type="text" placeholder="eg:Java Developer" name="we1"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="fdate1"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="tdate1"><br>
+</td>
+    </tr>
+     <tr>
+        <td>
+            <p>  Work experience:</p><center><input type="text" placeholder="eg:Java Developer" name="we2"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="fdate2"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="tdate2"><br>
+</td>
+
+    </tr>  <tr>
+        <td>
+            <p>  Work experience:</p><center><input type="text" placeholder="eg:Java Developer" name="we3"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="fdate3"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="tdate3"><br>
+</td>
+
+    </tr>
+
+</table>
+
+
+<table>
+    <tr>
+        <td>
+            <p>  Education:</p><center><input type="text" placeholder="eg:master's level" name="e1"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="rate31"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="rate32"><br>
+</td>
+    </tr>
+     <tr>
+        <td>
+            <p>  Education:</p><center><input type="text" placeholder="eg:Java Developer" name="e2"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="rate33"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="rate34"><br>
+</td>
+
+    </tr>  <tr>
+        <td>
+            <p>  Education:</p><center><input type="text" placeholder="eg:Java Developer" name="e3"></center>  </td>
+<td> 
+ <p>   From:</p><input type="Date"  name="rate35"><br>
+</td>
+<td><p>   To:</p><input type="Date"  name="rate36"><br>
+</td>
+
+    </tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <input type="submit" value="register">
         <style>
 body {
@@ -96,22 +218,8 @@ body {
 }
 
 
-p{
-	
-	font-size:32px;
-	color:red;
-	
-}
 
-input[type=text] {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 5px solid red;
-    border-radius: 4px;
-	border-radius:40px; 
-}
+
 
 input[type=submit] {
     width: 20%;
@@ -123,17 +231,36 @@ input[type=submit] {
 	border-radius:40px; 
 }
 
+input[type=text] {
+    width: 100%;
+    
+   
+    box-sizing: border-box;
+    border: 5px solid orange;
+    border-radius: 4px;
 
+}
 
-textarea {
-    width: 30%;
-    padding: 12px 20px;
+input[type=number] {
+    width: 100%;
+   
     margin: 8px 0;
     box-sizing: border-box;
-    border: 5px solid red;
+    border: 5px solid orange;
     border-radius: 4px;
-	border-radius:40px; 
 }
+    p{
+        color: purple;
+        font-size: 20px;
+        
+    }
+
+
+
+
+
+
+
 </style>
     
             
@@ -150,11 +277,8 @@ function validateForm() {
     var fname = document.forms["myform"]["fname"].value;
     var lname = document.forms["myform"]["lname"].value;
     
-    var faname = document.forms["myform"]["faname"].value;
-    var mname = document.forms["myform"]["mname"].value;
-    var  paddress= document.forms["myform"]["paddress"].value;
     
-    if(fname==="" && lname==="" && tadd==="" &&faname==="" &&mname==="" && paddress==="" ){
+    if(fname==="" && lname==="" && tadd===""){
         alert("empty field is not valid");
        return false; 
     }
